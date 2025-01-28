@@ -1,0 +1,268 @@
+/* 基本設定 */
+:root {
+    --primary-color: #E6E6FA;
+    --primary-dark: #9370DB;
+    --text-color: #333333;
+    --gray-light: #f8f9fa;
+    --gray-dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* ヘッダー */
+header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-dark);
+}
+
+/* メインビジュアル */
+.hero {
+    padding: 8rem 2rem 4rem;
+    background-color: var(--primary-color);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.button {
+    padding: 0.8rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.button-primary {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.button-secondary {
+    background-color: white;
+    color: var(--primary-dark);
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+/* 特徴セクション */
+.features {
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* お問い合わせセクション */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-description {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.contact-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* ヒーロー画像の設定 */
+.hero-image img {
+    width: 428px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* プライバシーポリシー・利用規約 */
+.policy-section {
+    padding: 5rem 2rem;
+    background-color: var(--gray-light);
+}
+
+.policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.policy-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.policy-content {
+    margin-bottom: 2rem;
+}
+
+.policy-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* フッター */
+footer {
+    background-color: var(--gray-dark);
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* レスポンシブ設定 */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
